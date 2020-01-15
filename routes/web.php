@@ -12,3 +12,4 @@
 */
 
 Route::get('/movies', 'MovieController@index');
+Route::get('/comics', 'ComicController@index');
