@@ -1,1 +1,60 @@
-//
+// VARIABILI
+$background_color: #000;
+$box_color: #666;
+$text_color: #fff;
+
+// MIXINS
+@mixin flex_center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  padding: 50px;
+  background-color: $background_color;
+  @include flex_center;
+    
+  .box {
+    width: 400px;
+    margin: 10px;
+    padding: 20px;
+    background-color: $box_color;
+    color: $text_color;
+    &:hover {
+      box-shadow: 0 0 5px 5px #888;
+    }  
+
+    .title {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .author {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    .year {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .overview {
+      font-size: 14px;
+    }
+  }  
+}
+
+
+
+
+

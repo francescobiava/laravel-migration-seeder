@@ -1,17 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-  <ol>
     @foreach ($comics as $comic)
-      <li>
-        <ul>
-          <li>{{ $comic->title }}</li>
-          <li>{{ $comic->author }}</li>
-          <li>{{ $comic->year }}</li>
-          <li>{{ $comic->overview }}</li>
+        <ul class="box">
+          <li class="title">{{ $comic->title }}</li>
+          <li class="author">{{ $comic->author }}</li>
+          <li class="year">{{ $comic->year }}</li>
+          <li class="overview">{{ $comic->overview }}</li>
         </ul>
-      </li>
-      <br>
     @endforeach
-  </ol>
 @endsection
